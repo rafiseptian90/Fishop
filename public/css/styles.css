@@ -1,0 +1,341 @@
+@import 'variable.css';
+@import 'fonts.css';
+@import 'mobile.css';
+
+.preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    background-color: #fff;
+}
+
+.preloader .loading {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font: 14px arial;
+}
+
+.preloader .loading .loader-img {
+    width: 180px;
+    height: 180px;
+}
+
+.preloader .loading p {
+    font-size: 18px;
+    font-style: 'Ubuntu';
+    text-align: center;
+    margin-top: 12px;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/* fontawesome style */
+.fas.fa-globe {
+    color: var(--blue);
+}
+
+.fab.fa-android {
+    color: var(--green);
+}
+
+.fas.fa-star {
+    color: var(--yellow);
+}
+
+.navbar {
+    z-index: 999;
+}
+
+.navbar .navbar-brand img {
+    width: 35px;
+    height: 35px;
+}
+
+.navbar-nav .nav-item .nav-link {
+    color: #ffffff;
+    text-transform: uppercase;
+    margin-left: 5px;
+    font-size: 14px;
+    font-family: 'Ubuntu';
+    transition: all 1s;
+}
+
+.navbar-nav .nav-item .nav-link:hover {
+    opacity: .6;
+}
+
+.jb-hero {
+    width: 100%;
+    height: 720px;
+    background-image: url('../assets/bg_jumbo.png');
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #fff;
+    margin-top: -57px;
+    background-attachment: fixed;
+    margin-bottom: -72px;
+}
+
+.jb-hero .container {
+    margin-top: 12%;
+}
+
+.jb-hero img.hero-img {
+    width: 200px;
+    height: 200px;
+}
+
+.jb-hero .hero-text h2.hero-text-title {
+    font-size: 28px;
+    font-family: 'Lato';
+    text-shadow: 2px 2px 5px #000;
+    text-transform: capitalize;
+}
+
+
+section#features .list-features h1.list-feature-title {
+    font-size: 17px;
+    text-transform: capitalize;
+    font-weight: bold;
+    margin-top: 12px;
+}
+
+.section-heading h1.section-title {
+    font-size: 32px;
+    font-weight: bold;
+    text-transform: capitalize;
+    margin-bottom: 25px;
+    width: 100%;
+}
+
+section#example-products {
+    width: 100%;
+    background-color: var(--grey);
+    background-size: cover;
+    margin-top: 20px;
+    padding: 50px 0 15px 0;
+}
+
+section#example-products h2.sub-heading {
+    font-size: 20px;
+    font-family: 'Ubuntu';
+    text-transform: capitalize;
+    color: var(--black);
+    font-weight: bold;
+    max-width: 48%;
+}
+
+section#example-products h2.sub-heading::after {
+    content: '';
+    display: block;
+    border-bottom: 2px solid #000;
+    width: 100%;
+    padding-bottom: 8px;
+    margin: auto;
+    margin-top: -5px;
+}
+
+section#example-products .link-all-product {
+    float: right;
+    color: var(--black);
+    text-decoration: none;
+}
+
+.brand {
+    margin-bottom: -32px;
+    margin-top: 25px;
+}
+
+.brand img {
+    width: 150px;
+    height: 150px;
+}
+
+.list-products {
+    margin-top: 18px;
+}
+
+.list-products .img-product img {
+    width: 100%;
+    height: 240px;
+}
+
+h3.name-product {
+    font-size: 15px;
+    font-family: 'Ubuntu';
+    text-transform: capitalize;
+    color: var(--black);
+}
+
+.list-products .desc {
+    margin-top: 12px;
+}
+
+.list-products .desc span.category {
+    font-size: 12px;
+    font-style: italic;
+    color: var(--black);
+    float: left;
+}
+
+.list-products .desc p.price {
+    font-size: 15px;
+    font-family: 'Ubuntu';
+    color: var(--black);
+    margin-bottom: 0px;
+}
+
+section#greeting {
+    background-image: url('../assets/hero_bg2.png');
+    width: 100%;
+    padding: 60px 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+section#greeting p.text-greet {
+    font-size: 35px;
+    font-family: 'Ubuntu';
+    color: var(--white);
+}
+
+.btn-start {
+    position: relative;
+    padding: 10px 15px 10px 15px;
+    background: transparent;
+    color: #ffffff;
+    border: 2px solid #fff;
+    outline: none;
+    border-radius: 18px;
+    transition: all 1s;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-family: 'Ubuntu';
+    font-weight: bold;
+}
+
+.btn-start:hover {
+    background: #fff;
+    color: #000;
+    cursor: pointer;
+}
+
+.search {
+    display: inline;
+}
+
+.category {
+    float: right;
+}
+
+footer {
+    background-color: var(--darklight);
+    width: 100%;
+    background-size: cover;
+    padding: 40px 0px;
+    color: rgba(216, 216, 216, 0.7);
+    margin-bottom: 0;
+}
+
+footer h2.sub-heading {
+    font-size: 19px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+    font-family: 'Ubuntu';
+}
+
+footer .about p {
+    font-size: 16px;
+    text-indent: 35px;
+    font-family: 'Lato';
+}
+
+footer .socmed .link-socmed {
+    font-size: 20px;
+    margin-left: 7px;
+    color: rgba(216, 216, 216, 0.7);
+    text-decoration: none;
+}
+
+.copyright {
+    margin-top: 10px;
+    margin-bottom: 0;
+}
+
+.filtering {
+    margin-bottom: -20px;
+}
+
+.cart-header {
+    margin-bottom: 18px;
+}
+
+.cart-header h1.cart-title {
+    font-size: 28px;
+    font-family: 'Ubuntu';
+    font-weight: bold;
+}
+
+.list-cart {
+    background-color: var(--white);
+    background-size: cover;
+    padding: 40px 0;
+}
+
+.list-cart h2.cart-text {
+    font-size: 16px;
+    font-family: 'Ubuntu';
+}
+
+.list-cart .cart-table thead th {
+    font-size: 14px;
+    font-family: 'Ubuntu';
+    font-weight: normal;
+}
+
+.list-cart .cart-table tbody td {
+    font-size: 13px;
+}
+
+td.cart-total-title {
+    font-size: 13px;
+}
+
+a.remove-cart {
+    color: #000;
+    opacity: 0.5;
+    text-decoration: none;
+}
+
+.btn-checkout {
+    position: relative;
+    padding: 10px 15px 10px 15px;
+    width: 85%;
+    background: rgb(13, 145, 206);
+    color: #fff;
+    border: 2px solid #fff;
+    outline: none;
+    border-radius: 18px;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.btn-checkout:hover {
+    cursor: pointer;
+}
+
+a.continue-shop {
+    text-decoration: none;
+}
