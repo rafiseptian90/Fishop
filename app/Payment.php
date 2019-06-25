@@ -4,12 +4,12 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Category extends Model
+class Payment extends Model
 {
     protected $guarded = ['id'];
 
-    public function product()
+    public function purchase()
     {
-        return $this->hasMany(Product::class);
+        return $this->hasMany(Purchase::class);
     }
 }
