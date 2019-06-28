@@ -58,78 +58,47 @@
             </div>
 
             <div class="row list-products wow flipInY" data-wow-duration="2s">
-                <div class="col-md-4 col-12 mb-3">
-                    <div class="card">
-                        <div class="card-body">
-                            <div class="row img-product">
-                                <div class="col-12">
-                                    <img src="{{ asset('assets/1.png') }}" alt="">
+                @foreach (\App\Product::orderBy('sold_out', 'desc')->limit(3)->get() as $product)
+                    <div class="col-md-4 col-12 mb-3">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="row img-product">
+                                    <div class="col-12">
+                                        <img src="{{ asset('storage/' . $product->photo) }}" alt="">
+                                        {{-- <a href="{{ route('view.product', $product->id) }}" class="btn-view">
+                                            <i class="fas fa-eye"></i> View
+                                        </a> --}}
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="row desc">
-                                <div class="col-md-6 col-6">
-                                    <h3 class="name-product">Point Of Sales</h3>
-                                    <span class="category">Web</span>
+                                <div class="row desc">
+                                    <div class="col-md-6 col-6">
+                                        <h3 class="name-product">{{ $product->name }}</h3>
+                                        <span class="category">{{ $product->category->name }}</span>
+                                    </div>
+                                    <div class="col-md-6 col-6 text-right">
+                                        <p class="price">Rp.{{ number_format($product->price) }}</p>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
                                 </div>
-                                <div class="col-md-6 col-6 text-right">
-                                    <p class="price">IDR.1.200.000</p>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 col-12 mb-3">
-                    <div class="card">
-                        <div class="card-body">
-                            <div class="row img-product">
-                                <div class="col-12">
-                                    <img src="{{ asset('assets/2.png') }}" alt="">
-                                </div>
-                            </div>
-                            <div class="row desc">
-                                <div class="col-md-6 col-6">
-                                    <h3 class="name-product">Attedance Student</h3>
-                                    <span class="category">Android</span>
-                                </div>
-                                <div class="col-md-6 col-6 text-right">
-                                    <p class="price">IDR.1.500.000</p>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
+                                <div class="row" style="margin-top:10px;">
+                                    <div class="col-12">
+                                        <a href="{{ route('cart.store') }}" class="btn btn-primary" id="buy" data-id="{{ $product->id }}">
+                                            <i class="fas fa-shopping-cart"></i> Buy
+                                        </a>
+
+                                        <a href="{{ route('view.product', $product->id) }}" class="btn btn-secondary" id="view" style="margin-left:3px;">
+                                            <i class="fas fa-eye"></i> View
+                                        </a>
+
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-4 col-12 mb-3">
-                    <div class="card">
-                        <div class="card-body">
-                            <div class="row img-product">
-                                <div class="col-12">
-                                    <img src="{{ asset('assets/3.png') }}" alt="">
-                                </div>
-                            </div>
-                            <div class="row desc">
-                                <div class="col-md-6 col-6">
-                                    <h3 class="name-product">Library</h3>
-                                    <span class="category">Dekstop</span>
-                                </div>
-                                <div class="col-md-6 col-6 text-right">
-                                    <p class="price">IDR.1.000.000</p>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                @endforeach
             </div>
         </div>
     </section>

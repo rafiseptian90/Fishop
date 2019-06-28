@@ -17,9 +17,13 @@
                         <a href="{{ route('product') }}" class="nav-link">Products</a>
                     </li>
                     <li class="nav-item">
-                        <a href="{{ route('cart') }}" class="nav-link">
+                        <a href="{{ route('cart.index') }}" class="nav-link">
                             Cart <i class="fas fa-shopping-cart"></i>
-                            <span class="badge badge-primary">1</span>
+                            <span class="badge badge-primary" id="cart">
+                                @if (Cookie::get('cart'))
+                                    {{ count(json_decode(Cookie::get('cart'))) }}
+                                @endif
+                            </span>
                         </a>
                     </li>
                     @guest

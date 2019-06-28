@@ -21,7 +21,7 @@ class CreatePurchasesTable extends Migration
             $table->foreign('product_id')->references('id')->on('products')->onDelete('cascade')->onUpdate('cascade');
             $table->unsignedBigInteger('payment_id');
             $table->foreign('payment_id')->references('id')->on('payments')->onDelete('cascade')->onUpdate('cascade');
-            $table->enum('status', ['cancel', 'deliver', 'success'])->default('deliver');
+            $table->enum('status', ['cancel', 'payment', 'verify', 'deliver', 'success'])->default('deliver');
             $table->integer('rate')->nullable();
             $table->text('review')->nullable();
             $table->timestamps();

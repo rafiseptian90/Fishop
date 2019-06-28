@@ -19,15 +19,22 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/products', function () {
-    return view('sites.products');
-})->name('product');
-
-Route::get('/cart', function () {
-    return view('sites.cart');
-})->name('cart');
-
+Route::get('/products', 'ProductController@index')->name('product');
 
 Route::group(['prefix' => 'admin'], function () {
+
     Voyager::routes();
 });
+
+// cart routing
+Route::get('/cart', 'CartController@index')->name('cart.index');
+Route::post('/cart', 'CartController@store')->name('cart.store');
+Route::post('/cart/cancel', 'CartController@cancel')->name('cart.cancel');
+
+// purchase routing
+Route::group(['prefix' => '/purchase'], function () {
+    Route::get('/', 'PurchaseController@index')->name('purchase.index');
+    Route::post('/', 'PurchaseController@store')->name('purchase.store');
+});
+
+Route::get('product/view/{id}', 'ProductController@view')->name('view.product');

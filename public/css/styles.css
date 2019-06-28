@@ -168,6 +168,11 @@ section#example-products .link-all-product {
 .list-products .img-product img {
     width: 100%;
     height: 240px;
+    transition: filter 1s;
+}
+
+.list-products .img-product img:hover {
+    filter: brightness(0.4);
 }
 
 h3.name-product {
@@ -228,14 +233,6 @@ section#greeting p.text-greet {
     background: #fff;
     color: #000;
     cursor: pointer;
-}
-
-.search {
-    display: inline;
-}
-
-.category {
-    float: right;
 }
 
 footer {
@@ -338,4 +335,33 @@ a.remove-cart {
 
 a.continue-shop {
     text-decoration: none;
+}
+
+.description h1.product-name {
+    font-style: 'Ubuntu';
+    font-size: 28px;
+    margin-bottom: 16px;
+}
+
+.description h3 {
+    font-style: 'Ubuntu';
+    font-size: 16px;
+}
+
+.description p {
+    font-style: 'Lato';
+    font-size: 13px;
+}
+
+section#purchase {
+    margin: 50px auto;
+}
+
+section#carts {
+    min-height: 257px;
+}
+
+.no-cart {
+    text-align: center;
+    margin-top: 5%;
 }
