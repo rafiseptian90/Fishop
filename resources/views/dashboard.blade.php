@@ -57,7 +57,7 @@
                 </div>
             </div>
 
-            <div class="row list-products wow flipInY" data-wow-duration="2s">
+            <div class="row list-products wow fadeIn" data-wow-duration="2s">
                 @foreach (\App\Product::orderBy('sold_out', 'desc')->limit(3)->get() as $product)
                     <div class="col-md-4 col-12 mb-3">
                         <div class="card">

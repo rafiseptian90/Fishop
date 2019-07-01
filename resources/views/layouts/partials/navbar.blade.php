@@ -46,6 +46,10 @@
                                 <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                     @csrf
                                 </form>
+
+                                <a href="{{ route('purchase.index') }}" class="dropdown-item">
+                                    History
+                                </a>
                             </div>
                         </li>
                     @endguest

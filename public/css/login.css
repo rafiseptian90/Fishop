@@ -1,0 +1,58 @@
+@import 'variable.css';
+@import 'fonts.css';
+@import 'mobile.css';
+
+.auth {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.left {
+    background-image: linear-gradient(to right, rgb(62, 73, 88), rgb(60, 120, 199));
+    background-size: cover;
+    color: var(--white);
+    padding: 40px;
+    text-align: center;
+}
+
+.left img.img-brand {
+    width: 180px;
+    height: 180px;
+    margin-bottom: 15px;
+}
+
+.left h1.name-brand {
+    font-size: 35px;
+    font-family: 'Ubuntu';
+}
+
+.right {
+    color: var(--black);
+    padding: 40px;
+    width: 100%;
+}
+
+.right h1.login-title {
+    font-size: 26px;
+    font-family: 'Ubuntu';
+    margin-bottom: 24px;
+}
+
+.login {
+    padding: 0 14px;
+}
+
+.btn-auth {
+    background: linear-gradient(to right, rgb(62, 73, 88), rgb(60, 120, 199));
+    padding: 8px 12px 8px 12px;
+    outline: none;
+    border: none;
+    border-radius: 16px;
+    color: var(--white);
+    font-style: 'Lato';
+    font-size: 15px;
+    width: 100%;
+    cursor: pointer;
+}

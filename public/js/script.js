@@ -12,21 +12,6 @@ $(document).ready(function () {
     });
 });
 
-// $('.img-product img').mouseenter(function () {
-//     $('.img-product').addClass('active-hover');
-
-//     $('.img-product').mouseleave(function () {
-//         $('.img-product').removeClass('active-hover');
-//     });
-
-// });
-
-// $('body').on('mouseenter', '.active-hover', function () {
-//     $('.btn-view').css({
-//         'display': 'block'
-//     });
-// });
-
 // make cookie cart
 $('body').on('click', '#buy', function (e) {
     e.preventDefault();
@@ -42,7 +27,10 @@ $('body').on('click', '#buy', function (e) {
         },
         success: function (response) {
             $('#cart').html(response.cart);
-            alert(response.msg);
+            Toast.fire({
+                type: 'success',
+                title: 'Added to cart'
+            })
         }
     });
 });
@@ -65,7 +53,10 @@ $('body').on('click', '.remove-cart', function (e) {
             success: function (res) {
                 location.reload();
                 $('#cart').html(res.cart);
-                alert(res.msg);
+                Toast.fire({
+                    type: 'success',
+                    title: 'Canceled'
+                })
             }
         });
     }

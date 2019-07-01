@@ -40,9 +40,11 @@
     </div>
 
     <script src="{{ asset('js/app.js') }}"></script>
-    <script src="{{ asset('js/script.js') }}"></script>
     <script src="{{ asset('vendor/owl-carousel/owl.carousel.min.js') }}"></script>
     <script src="{{ asset('vendor/wow/wow.min.js') }}"></script>
+    <script src="{{ asset('vendor/sweetalert2/sweetalert2.all.min.js') }}"></script>
+    <script src="{{ asset('js/init.js') }}"></script>
+    <script src="{{ asset('js/script.js') }}"></script>
     @stack('script')
 </body>
 </html>

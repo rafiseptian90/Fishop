@@ -26,7 +26,7 @@
 
 }
 
-@media (max-width: 320px) {
+@media (max-width: 420px) {
     .jb-hero {
         height: 600px !important;
     }
@@ -78,5 +78,35 @@
 
     .continue-shop {
         margin-left: 25% !important;
+    }
+
+    .filtering {
+        margin-top: 18% !important;
+    }
+
+    .auth {
+        margin-top: 20% !important;
+    }
+
+    .left {
+        padding: 20px !important;
+    }
+
+    .right {
+        padding: 20px !important;
+    }
+
+    .left img.img-brand {
+        width: 120px !important;
+        height: 120px !important;
+        margin-bottom: 15px;
+    }
+
+    .left h1.name-brand {
+        font-size: 25px !important;
+    }
+
+    .no-history {
+        min-height: 180px !important;
     }
 }

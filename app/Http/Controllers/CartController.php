@@ -26,7 +26,7 @@ class CartController extends Controller
 
         Cookie::queue('cart', json_encode($cart), 60);
 
-        return response(['msg' => 'Added to cart', 'cart' => count($cart)]);
+        return response(['cart' => count($cart)]);
     }
 
     public function cancel(Request $request)

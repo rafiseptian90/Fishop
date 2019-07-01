@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Product;
 use Illuminate\Support\Facades\Input;
+use App\Purchase;
 
 class ProductController extends Controller
 {
@@ -17,19 +18,19 @@ class ProductController extends Controller
         if (Input::get('search')) {
             $q = Input::get('search');
 
-            strtolower($q);
+            $input = strtolower($q);
 
-            if ($q === 'web') {
-                $q = '1';
+            if ($input === 'web') {
+                $input = '1';
             }
-            if ($q === 'android') {
-                $q = '2';
+            if ($input === 'android') {
+                $input = '2';
             }
-            if ($q === 'desktop') {
-                $q = '3';
+            if ($input === 'desktop') {
+                $input = '3';
             }
 
-            $products = Product::where('name', 'like', '%' . $q . '%')->Orwhere('category_id', $q);
+            $products = Product::where('name', 'like', '%' . $q . '%')->Orwhere('category_id', $input);
         }
 
         $products = $products->get();
@@ -38,8 +39,12 @@ class ProductController extends Controller
     }
     public function view($id)
     {
-        $product = Product::findOrFail($id);
+        $product = Product::with('purchase')->findOrFail($id);
 
-        return view('sites.view_product', compact('product'));
+        $comments = Purchase::with('user')->where('rate', '!=', null)->where('product_id', $id)->get();
+
+        $purchase = $product->purchase->where('user_id', auth()->user()->id)->first();
+
+        return view('sites.view_product', ['product' => $product, 'comments' => $comments, 'purchase' => $purchase]);
     }
 }
