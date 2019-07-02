@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Product;
 use Illuminate\Support\Facades\Input;
 use App\Purchase;
+use Auth;
 
 class ProductController extends Controller
 {
@@ -43,7 +44,11 @@ class ProductController extends Controller
 
         $comments = Purchase::with('user')->where('rate', '!=', null)->where('product_id', $id)->get();
 
-        $purchase = $product->purchase->where('user_id', auth()->user()->id)->first();
+        if (Auth::check()) {
+            $purchase = $product->purchase->where('user_id', auth()->user()->id)->first();
+        } else {
+            $purchase = null;
+        }
 
         return view('sites.view_product', ['product' => $product, 'comments' => $comments, 'purchase' => $purchase]);
     }

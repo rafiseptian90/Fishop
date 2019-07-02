@@ -24,7 +24,7 @@
                                              @if ($product->rating === 0)
                                                   Belum ada rating dari pembeli
                                              @endif
-                                                  <i class="fas fa-star"></i> {{ $product->rating }} dari {{ count($product->purchase->where('rate', '!=', null)) }} pembeli
+                                                  <i class="fas fa-star"></i> {{ str_limit($product->rating, 3, '') }} dari {{ count($product->purchase->where('rate', '!=', null)) }} pembeli
                                         </p>
                                         <h3>Terjual:</h3>
                                         <p>{{ $product->sold_out }}</p>
@@ -59,7 +59,7 @@
                     <p style="font-size: 18px; font-family: 'Lato';">Belum ada review</p>
                     @endif
                     
-                    @if ($purchase)
+                    @if ($purchase != null)
                          @if ($purchase->rate === null)
                               <form action="{{ route('purchase.review', $product->id) }}" method="post" id="form-review" class="col-lg-5 col-12">
                                    {{ csrf_field() }}

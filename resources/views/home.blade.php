@@ -73,10 +73,7 @@
                                     </div>
                                     <div class="col-md-6 col-6 text-right">
                                         <p class="price">Rp.{{ number_format($product->price) }}</p>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i> {{ str_limit($product->rating, 3, '') }}
                                     </div>
                                 </div>
                                 <div class="row" style="margin-top:10px;">

@@ -42,7 +42,7 @@
                         </div>
                         <div class="col-md-6 col-6 text-right">
                             <p class="price">Rp.{{ number_format($product->price) }}</p> 
-                            <i class="fas fa-star"></i> {{ $product->rating }}
+                            <i class="fas fa-star"></i> {{ str_limit($product->rating, 3, '') }}
                             {{-- @php
                                 for ($i=1; $i <= $product->rating; $i++) { 
                                     echo '<i class="fas fa-star"></i>';
