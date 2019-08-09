@@ -12,3 +12,8 @@
     font-family: 'Nunito';
     src: url('../assets/fonts/Nunito-Regular.ttf')
 }
+
+@font-face {
+    font-family: 'Capriola';
+    src: url('../assets/fonts/Capriola-Regular.ttf');
+}

@@ -3,13 +3,20 @@
 @section('content')
     <div class="jumbotron jumbotron-fluid jb-hero">
         <div class="container">
-            <div class="row justify-content-center wow fadeInLeft" data-wow-duration="2s">
-                <img src="{{ asset('assets/logo-fi.png') }}" alt="" class="hero-img">
+            <div class="row">
+                <div class="col-6">
+                    <h4 class="name-brand">
+                        The Best Solution for Your Task
+                    </h4>
+                </div>
             </div>
-            <div class="row justify-content-center hero-text mt-3">
-                <h2 class="hero-text-title wow fadeIn" data-wow-duration="1s" data-wow-delay="1.2s">
-                    Menyediakan Berbagai Jenis Produk Software
-                </h2>
+
+            <div class="row">
+                <div class="col-6">
+                    <h1 class="hero-text">
+                        Menyediakan berbagai produk software berkualitas
+                    </h1>
+                </div>
             </div>
         </div>
     </div>

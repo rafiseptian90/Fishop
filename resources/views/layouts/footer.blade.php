@@ -34,7 +34,7 @@
             <div class="row copyright">
                 <div class="col-10 offset-1">
                     <p>
-                        &copy; Rein X RPL 2 - 2019
+                        &copy; Rafi - XI RPL 2 - 2019
                     </p>
                 </div>
             </div>

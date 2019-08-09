@@ -31,16 +31,24 @@
         height: 600px !important;
     }
 
-    .jb-hero .hero-text h2.hero-text-title {
-        font-size: 20px !important;
-        max-width: 50%;
-        text-align: center;
+    .jb-hero .container {
+        margin-top: 52% !important;
+        padding: 0 15px !important;
     }
 
-    .jb-hero img.hero-img {
-        width: 120px !important;
-        height: 120px !important;
-        margin-top: 34%;
+    .btn-jb-start {
+        left: 4% !important;
+        font-size: 15px !important;
+    }
+
+    .jb-hero h1.hero-text {
+        font-size: 27px !important;
+        line-height: 37px;
+    }
+
+    section#features .list-features h1.list-feature-title {
+        margin-top: 7px !important;
+        margin-bottom: 20px !important;
     }
 
     section#example-products h2.sub-heading {
@@ -108,5 +116,9 @@
 
     .no-history {
         min-height: 180px !important;
+    }
+
+    .section-rating {
+        margin-bottom: 12% !important;
     }
 }

@@ -1,18 +1,30 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="jumbotron jumbotron-fluid jb-hero">
-        <div class="container">
-            <div class="row justify-content-center wow fadeInLeft" data-wow-duration="2s">
-                <img src="{{ asset('assets/logo-fi.png') }}" alt="" class="hero-img">
+<div class="jumbotron jumbotron-fluid jb-hero">
+        <a href="{{ route('product') }}">
+            <button class="btn-jb-start">
+                <i class="fas fa-search"></i> Lihat Produk
+            </button>
+        </a>
+    <div class="container">
+        
+        <div class="row">
+            <div class="col-md-6 col-12">
+                <h1 class="hero-text">
+                    Permudah Pekerjaanmu Dengan Menggunakan Teknologi Software
+                </h1>
             </div>
-            <div class="row justify-content-center hero-text mt-3">
-                <h2 class="hero-text-title wow fadeIn" data-wow-duration="1s" data-wow-delay="1.2s">
-                    Menyediakan Berbagai Jenis Produk Software
-                </h2>
+        </div>
+        <div class="row">
+            <div class="col-md-6 col-12">
+                <h4 class="hero-text">
+                    
+                </h4>
             </div>
         </div>
     </div>
+</div>
 
     <section id="features">
         <div class="container">
@@ -117,9 +129,21 @@
     <script>
         new WOW().init();
 
+        const options = {
+            strings: ["Menyediakan berbagai produk software berkualitas", "Dibuat Oleh Para Programmer Professional"],
+            typeSpeed: 40,
+            loop: true,
+            backDelay: 2000,
+            showCursor: false,
+            fadeOut: true,
+        }
+
+        new Typed('h4.hero-text', options);
+
         $('.owl-carousel').owlCarousel({
             autoplay: true,
             autoplayTimeout: 2000,
+            autoplayHoverPause:true,
             items: 3,
             loop: true,
             responsive : {
