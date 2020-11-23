@@ -1,0 +1,3 @@
+-- admin --
+email: gerrytris_7@fishop.com
+password: gerry#AdMin38&$

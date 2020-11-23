@@ -45,14 +45,14 @@ class PurchaseController extends Controller
 
         $file = $request->file('proof');
 
-        $proof = $file->store('purchases/' . $time->format('FY'));
+        $proof = $file->store('public/purchases/' . $time->format('FY'));
 
         foreach ($carts as $id => $product_id) {
             Purchase::create([
                 'user_id' => auth()->user()->id,
                 'product_id' => $product_id,
                 'payment_id' => $request->payment_id,
-                'proof' => $proof,
+                'proof' => substr($proof, 7),
                 'status' => 'payment',
             ]);
         }

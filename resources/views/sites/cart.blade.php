@@ -2,7 +2,7 @@
 
 @section('content')
      <section id="carts">
-          
+
           @if (Cookie::get('cart'))
                <div class="container">
                     <div class="row cart-header mt-4">
@@ -30,11 +30,11 @@
                                         <table class="table table-hover table-responsive">
                                              <thead>
                                                   <th>No</th>
-                                                  <th>Gambar</th>
-                                                  <th style="min-width:18%">Nama Software</th>
-                                                  <th>Deksripsi</th>
-                                                  <th>Harga</th>
-                                                  <th>Hapus</th>
+                                                  <th>Images</th>
+                                                  <th style="min-width:18%">Software Name</th>
+                                                  <th>Descrption</th>
+                                                  <th>Price</th>
+                                                  <th>Delete</th>
                                              </thead>
 
                                              <tbody>
@@ -61,7 +61,7 @@
                                    </div>
                               </div>
                          </div>
-                         
+
                          <div class="col-md-3 col-sm-12">
                               <div class="row">
                                    <div class="col-12">
@@ -82,7 +82,7 @@
                                                   <td class="cart-total-body">IDR.1.200.000</td>
                                              </tr> --}}
                                         </table>
-                                        
+
                                         <form method="post" action="{{ route('purchase.store') }}" enctype="multipart/form-data">
                                              {{ csrf_field() }}
                                              <div class="form-group">

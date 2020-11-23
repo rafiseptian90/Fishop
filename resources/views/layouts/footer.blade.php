@@ -1,7 +1,7 @@
 <footer>
         <div class="container">
             <div class="row justify-content-center">
-                <div class="col-md-5 about">
+                <div class="col-md-6 about">
                     <h2 class="sub-heading">
                         About Fi-Shop
                     </h2>
@@ -9,7 +9,17 @@
                         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Obcaecati nemo voluptates aperiam amet suscipit. Blanditiis accusamus officiis provident! Neque fugit nostrum sint excepturi facere veniam officia sunt numquam harum molestias.
                     </p>
                 </div>
-                <div class="col-md-5 socmed text-center">
+                <div class="col-md-3">
+                    <h2 class="sub-heading">
+                        Contact Us
+                    </h2>
+
+                    <p class="text-center">
+                        <i class="fas fa-phone mr-2"></i>
+                        <span>0210-3422-4355</span>
+                    </p>
+                </div>
+                <div class="col-md-3 socmed text-center">
                     <h2 class="sub-heading">
                         Follow Us
                     </h2>
